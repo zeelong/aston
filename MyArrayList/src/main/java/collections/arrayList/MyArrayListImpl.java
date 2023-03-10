@@ -2,7 +2,7 @@ package collections.arrayList;
 
 import java.util.Comparator;
 
-public interface MyArrayListImpl<T> extends Comparable {
+public interface MyArrayListImpl<T> {
 
     void add(T element);
 

@@ -1,6 +1,8 @@
 package collections.arrayList;
 
 
+import collections.sorter.QuickSort;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -135,21 +137,15 @@ public class MyArrayList<T> implements MyArrayListImpl<T> {
         return size == 0;
     }
 
-    //TODO
     @Override
     public void sort(Comparator<T> comparator) {
+        QuickSort.quickSort(array, 0, size - 1, comparator);
     }
 
     private void increaseCapacity() {
         T[] temp = array;
         array = (T[]) new Object[temp.length * 3 / 2 + 1];
         array = Arrays.copyOf(temp, array.length);
-    }
-
-    //TODO
-    @Override
-    public int compareTo(Object o) {
-        return 0;
     }
 
     @Override

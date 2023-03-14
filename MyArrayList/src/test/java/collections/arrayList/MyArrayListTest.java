@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Comparator;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyArrayListTest {
@@ -98,6 +100,7 @@ class MyArrayListTest {
         list2.add(1);
         list2.add(5);
         list2.add(4);
+        list2.sort(Comparator.comparingInt(x->x));
         for (int i = 0; i < list2.size(); i++) {
             assertEquals(list.get(i),(list2.get(i)));
         }
